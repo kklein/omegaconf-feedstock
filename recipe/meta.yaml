@@ -44,7 +44,9 @@ about:
   home: https://github.com/omry/omegaconf
   license: BSD-3-Clause
   license_family: BSD
-  license_file: LICENSE
+  license_file:
+    - LICENSE
+    - LICENSE_antlr.txt
   summary: Flexible python configuration system
 
   description: |
