@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/omegaconf-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/omegaconf-{{ version }}.tar.gz
   sha256: 9948b9bfb15074863883bb90c4bfc9f3878af392e77ef5d8c9b01fac834745b1
 
 build:
@@ -16,16 +16,18 @@ build:
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}
     - pip
+    - setuptools
   run:
-    - python >=3.9
+    - python >= {{ python_min }}
     - pyyaml >=5.1.0
     - typing_extensions
 test:
   imports:
     - omegaconf
   requires:
+    - python {{ python_min }}
     - pytest
     - pytest-benchmark
     - pytest-mock
