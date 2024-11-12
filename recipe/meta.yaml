@@ -1,5 +1,5 @@
 {% set name = "omegaconf" %}
-{% set version = "2.3.0" %}
+{% set version = "2.4.0.dev3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/omegaconf-{{ version }}.tar.gz
-  sha256: d5d4b6d29955cc50ad50c46dc269bcd92c6e00f5f90d23ab5fee7bfca4ba4cc7
+  sha256: 9948b9bfb15074863883bb90c4bfc9f3878af392e77ef5d8c9b01fac834745b1
 
 build:
   noarch: python
@@ -16,15 +16,12 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.9
     - pip
-    - antlr 4.9
   run:
-    - python >=3.7
+    - python >=3.9
     - pyyaml >=5.1.0
-    - antlr-python-runtime 4.9
     - typing_extensions
-
 test:
   imports:
     - omegaconf
