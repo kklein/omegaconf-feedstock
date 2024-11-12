@@ -33,7 +33,6 @@ test:
     - pytest
     - pytest-benchmark
     - pytest-mock
-    - pytest-lazy-fixture
     - pip
     # Temporary pin <https://github.com/conda-forge/omegaconf-feedstock/pull/40#issuecomment-1294669062>
   source_files:
